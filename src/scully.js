@@ -7,6 +7,8 @@ import HomePage from './components/HomePage'
 import Store from './components/Store'
 import Item from './components/Item'
 
+console.log('test')
+
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
@@ -15,7 +17,7 @@ render((
 			<Route path="/item/:itemID" component={Item}/>
 		</Route>
   </Router>
-), document.body)
+), document.getElementById('wiggle'))
 
 // app
 // 	homepage

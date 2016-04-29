@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Router, Route, Link, browserHistory,IndexRoute } from 'react-router'
 
 import App from './components/App'
 import HomePage from './components/HomePage'
@@ -10,12 +10,13 @@ import Item from './components/Item'
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-			<Route path="home" component={HomePage}/>
+			<IndexRoute component={HomePage}/>
+			<Route path="/home" component={HomePage}/>
 			<Route path="/store/:storeID" component={Store}/>
 			<Route path="/item/:itemID" component={Item}/>
 		</Route>
   </Router>
-), document.body)
+), document.getElementById('wiggle'))
 
 // app
 // 	homepage
